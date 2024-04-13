@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_13_184606) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_13_203618) do
   create_table "features", force: :cascade do |t|
     t.string "type"
     t.string "external_id"
@@ -21,8 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_13_184606) do
     t.string "mag_type", null: false
     t.string "title", null: false
     t.decimal "c_longitude"
-    t.string "c_latitude"
-    t.string "decimal"
+    t.decimal "c_latitude"
     t.string "external_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
