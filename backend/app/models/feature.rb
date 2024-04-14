@@ -9,6 +9,6 @@ class Feature < ApplicationRecord
     validates :external_id, uniqueness: true
 
     def self.filter_by_mag_type(mag_types)
-        where(Feature.arel_table[:mag_type].in(mag_types))
+        where(mag_type: mag_types)
     end
 end
