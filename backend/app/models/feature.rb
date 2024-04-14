@@ -6,4 +6,8 @@ class Feature < ApplicationRecord
     validates :c_longitude, comparison: {greather_than_or_equal_to: -180.0, less_than_or_equal_to: 180.0}
 
     validates :external_id, uniqueness: true
+
+    def self.filter_by_mag_type(mag_types)
+        where(Feature.arel_table[:mag_type].in(mag_types))
+    end
 end
