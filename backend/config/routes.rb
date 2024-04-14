@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     get '/features' =>'feature#index'
+    post '/features/:id/comments' => 'comment#create'
+    get '/features/:id/comments' => 'comment#show_by_feature'
   end
   
 end
