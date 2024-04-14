@@ -1,4 +1,5 @@
 class Feature < ApplicationRecord
+    has_many :comments
     validates :place, :mag_type, :title, :external_url, presence: true
     
     validates :magnitude, comparison: {greather_than_or_equal_to: -1.0, less_than_or_equal_to: 10.0}
