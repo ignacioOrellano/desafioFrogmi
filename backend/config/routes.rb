@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  namespace :api do
+    get '/features' =>'feature#index'
+    post '/features/:id/comments' => 'comment#create'
+    get '/features/:id/comments' => 'comment#show_by_feature'
+  end
+  
 end
